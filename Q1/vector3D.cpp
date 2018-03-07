@@ -14,7 +14,9 @@ class vector3D
     f x,y,z;
 
     vector3D() {x=y=z=0;} /* initialize using a constructor */
-    vector3D(f _x,f _y,f _z) {x = _x; y = _y; z = _z;} /* accepts, 3 parameters, _x, _y, _z, and equates them to x, y, z using constructor */
+    vector3D(f _2Dx, f _2Dy) {x = _2Dx; y = _2Dy; z = 0;} /* For 2D, 2 parameter, assuming component z = 0, there assuming it 2D vector, and equates them to x, y, 0 using constructor */
+    vector3D(f _3Dx,f _3Dy,f _3Dz) {x = _3Dx; y = _3Dy; z = _3Dz;} /* For 3D, accepts, 3 parameters, _x, _y, _z, and equates them to x, y, z using constructor */
+    
     vector3D(const vector3D &vector); /* intialize using copy constructor */
     
     vector3D operator+(const vector3D &vector);
